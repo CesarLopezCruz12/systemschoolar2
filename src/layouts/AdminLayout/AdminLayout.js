@@ -13,8 +13,7 @@ export  function AdminLayout(props) {
         <Link href='/Calificaciones'>Calificaciones</Link>
         <Link href='/Ranking'>Ranking</Link>
         <Link href='/Reportes'>Reportes</Link>
-        {children}
-
+        
         
     </div>
   )

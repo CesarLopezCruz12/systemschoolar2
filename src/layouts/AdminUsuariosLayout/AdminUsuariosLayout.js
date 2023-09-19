@@ -21,7 +21,9 @@ export  function AdminUsuarios() {
 
   return (
     <div className={styles.adminusuarios}>
+      
       <TopLogo/>
+      
   <div className={styles.header}>
     <h1>Usuarios</h1>
   </div>

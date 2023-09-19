@@ -1,10 +1,22 @@
-import { Table, Button, Icon } from "semantic-ui-react";
+import { Table, Button, Icon , Pagination} from "semantic-ui-react";
 import styles from './TablaUsuarios.module.scss';
 import React, { useState } from 'react';
 
 let data = [
-    { Name: 'Juan Pérez', ID: '12345', Email: 'juan@example.com', type: "Estudiante", Registerdate: '2023-01-15' },
-    { Name: 'María López', ID: '67890', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'Juan Pérez', ID: '12345', TIUser: 'Profesor',  Email: 'juan@example.com', type: "Estudiante", Registerdate: '2023-01-15' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
+    { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
     // ... otros datos ...
   ];
 
@@ -35,6 +47,19 @@ export function TablaUsuarios() {
   const handleCancelDelete = () => {
     setConfirmOpen(false);
   };
+
+  const itemsPerPage = 10;
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  const [activePage, setActivePage] = useState(1);
+  const startIndex = (activePage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentData = data.slice(startIndex, endIndex);
+
+  const handlePageChange = (e, { activePage }) => {
+    setActivePage(activePage);
+  };
+
   return (
     <div className={styles.customTable}>
          <Table>
@@ -43,6 +68,7 @@ export function TablaUsuarios() {
             <Table.HeaderCell ></Table.HeaderCell>
             <Table.HeaderCell className={styles.headerCell}>Nombre</Table.HeaderCell>
             <Table.HeaderCell className={styles.headerCell}>Matrícula</Table.HeaderCell>
+            <Table.HeaderCell className={styles.headerCell}>Tipo Usuario</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
             <Table.HeaderCell>Fecha de Creación</Table.HeaderCell>
             <Table.HeaderCell>Acciones</Table.HeaderCell>
@@ -54,9 +80,10 @@ export function TablaUsuarios() {
               <Table.Cell style={{ width: '150px' }} className={styles.centeredCell}>{/*item.Photo*/}<Icon name="id card" /></Table.Cell>
               <Table.Cell style={{ width: '200px' }} className={styles.centeredCell}>{item.Name}</Table.Cell>
               <Table.Cell style={{ width: '200px' }} className={styles.centeredCell}>{item.ID}</Table.Cell>
+              <Table.Cell style={{ width: '200px' }} className={styles.centeredCell}>{item.TIUser}</Table.Cell>
               <Table.Cell style={{ width: '200px' }} className={styles.centeredCell}>{item.Email}</Table.Cell>
               <Table.Cell style={{ width: '200px' }} className={styles.centeredCell}>{item.Registerdate}</Table.Cell>
-              <Table.Cell style={{ width: '50px' }} className={styles.centeredCell}>
+              <Table.Cell style={{ width: '100px' }} className={styles.centeredCell}>
               <Button icon color="" onClick={() => handleEdit(item.id)} className={styles.iconButton}>
                   <Icon name="pencil alternate" />
                 </Button>
@@ -68,7 +95,11 @@ export function TablaUsuarios() {
           ))}
         </Table.Body>
       </Table>
-      
+      <Pagination
+        activePage={activePage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
 
     </div>
   )

@@ -1,3 +1,44 @@
-.relative {
-    padding-top: 100px;
+/* Content.module.scss */
+.content {
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s;
+  margin-left: 250px; /* Espacio a la derecha del menú cuando está extendido */
+}
+
+.contentExpanded {
+  margin-left: 160px; /* Mismo margen cuando el menú está extendido */
+}
+
+.contentCollapsed {
+  margin-left: 60px; /* Espacio a la derecha del menú cuando está contraído */
+}
+
+/* Sidebar.module.scss */
+.sidebar {
+  width: 160px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.collapsed {
+  width: 40px;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.menuContent {
+  padding: 10px; /* Espacio adicional entre el menú y el contenido principal */
 }

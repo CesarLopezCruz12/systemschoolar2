@@ -6,11 +6,14 @@ import  Logo  from './';
 export function TopLogo() {
 
     return (
-        <div className={styles.presentationBar}>
+      <div className={styles.presentationBar}>
       <div className={styles.content}>
-        <div className={styles.title}>Glasscore</div>
-        <Image src="" alt="Logo Glasscore" className={styles.logo} />
+        <div className={styles.titleAndLogo}>
+          <div className={styles.title}>Glasscore</div>
+          <Image src="/logosinbackground.png" width={100} height={100} alt="Logo Glasscore" className={styles.logo} />
+        </div>
       </div>
+      <hr className={styles.separator} />
     </div>
     )
   }

@@ -1,20 +1,36 @@
+/* Tu archivo de estilos .scss o .css */
+
 .presentationBar {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
+  background-color: #fff; /* Añade cualquier estilo adicional necesario */
+  color: blue; /* Añade cualquier estilo de color necesario */
+  font-family: 'Monserrat', sans-serif; /* Cambia la fuente del título */
+  font-size: 30px;
 }
 
 .content {
+  max-width: 1000px; /* Ajusta el ancho máximo según tus preferencias */
+  margin: 0 auto; /* Centra el contenido en el contenedor */
+  padding: 10px; /* Añade relleno según tus preferencias */
+}
+
+.titleAndLogo {
   display: flex;
-  align-items: center;
+  justify-content: flex-end; /* Alinea los elementos al extremo derecho */
+  align-items: center; /* Alinea verticalmente si es necesario */
 }
 
 .title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-left: 10px; /* Espacio entre la imagen y el título */
+  margin-right: 10px; /* Ajusta el margen entre el título y la imagen según sea necesario */
+}
+
+.separator {
+  margin: 10px 0; /* Ajusta el margen superior e inferior según tus preferencias */
+  border: none; /* Elimina el borde predeterminado del hr */
+  height: 1px; /* Ajusta la altura del hr según tus preferencias */
+  background-color: #ccc; /* Ajusta el color del hr según tus preferencias */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+}
+.logo{
+  width: 50px;
+  height: 50px;
 }

@@ -1,19 +1,17 @@
 import styles from "./BasicLayout.module.scss";
-
 import { Container} from "semantic-ui-react";
-import classNames from "classnames";
 
 
 
-export  function BasicLayout(props) {
-    const { children } = props;
+export  function BasicLayout({ menuVisible }) {
+  
+  const contentClass = menuVisible ? styles.contentExpanded : styles.contentCollapsed;
+
+  
   return (
-    <div className={styles.BasicLayout}>
-
-        
-        {children}
-
-        
+    <div className={`${styles.content} ${contentClass}`}>
+      {/* Contenido de la página seleccionada */}
+      jdjdkjpfkmsdkfmksdmfldsmkfmksdmfksdmkfmsdkmfkdmsk
     </div>
   )
 }
