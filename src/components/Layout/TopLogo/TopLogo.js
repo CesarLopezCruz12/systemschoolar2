@@ -2,7 +2,6 @@
 import React from 'react';
 import styles from './TopLogo.module.scss'; // Importa tus estilos SCSS
 import Image from 'next/image'
-import  Logo  from './';
 export function TopLogo() {
 
     return (

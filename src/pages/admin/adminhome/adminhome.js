@@ -1,12 +1,9 @@
-import { AdminLayout } from "@/layouts/AdminLayout/AdminLayout";
-import { AdminUsuarios } from "@/layouts/AdminUsuariosLayout/AdminUsuariosLayout";
+import { AdminUsuariosLayout } from "@/layouts"
 
 export default function AdminHome() {
   return (
     <div>
-
-     
-      <AdminUsuarios/>
+        <AdminUsuariosLayout/>
     </div>
   )
 }
