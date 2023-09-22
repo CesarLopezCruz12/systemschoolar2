@@ -1,0 +1,67 @@
+.filterRow {
+    display: flex;
+    justify-content: space-between;
+
+    .leftSection {
+      display: flex;
+      align-items: center; // Centrar verticalmente los elementos en la izquierda
+      
+    }
+
+    .rightSection {
+      display: flex;
+      align-items: center; // Centrar verticalmente los elementos en la derecha
+        
+    }
+  }
+  
+  .filterContainer {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 30px; // Ajusta el espacio entre el título y el select
+    }
+  }
+
+  
+  .selectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px;
+  }
+  
+  /* Ajusta el ancho de los Dropdown en pantallas grandes */
+  .selperiod,
+  .selyear,
+  .selid,
+  .selseccion {
+    flex: 0 0 150px; /* Establece un ancho fijo de 30px en pantallas grandes */
+    margin-right: 10px;
+    
+  }
+  
+  /* Ajusta el ancho de los Dropdown en pantallas pequeñas */
+  @media screen and (max-width: 768px) {
+    .selectContainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 250px;
+      }
+
+    .selperiod,
+    .selyear,
+    .selid,
+    .selseccion {
+      flex: 0 0 100%; /* Forza a los elementos a ocupar el 100% del ancho en pantallas pequeñas */
+      margin-right: 0;
+      margin-top: 20px;
+    }
+  }
+
+  .tablecontainer{
+    margin-top: 30px;
+  }
+  
+  
+  

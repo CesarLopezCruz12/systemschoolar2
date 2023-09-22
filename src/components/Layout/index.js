@@ -8,3 +8,7 @@ export * from './FiltrarCalificaciones';
 export * from './Ranking';
 export * from './Reportes';
 export * from './ContentAdmin';
+export * from './TablaRanking';
+export * from './CirculoProgreso';
+export * from './TablaCalificaciones';
+export * from './MateriaHorario';

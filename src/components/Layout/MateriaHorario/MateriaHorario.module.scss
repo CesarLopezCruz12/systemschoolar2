@@ -1,0 +1,28 @@
+.headerModal{
+  display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    padding: 0;
+    height: 100px;
+    width: 200px;
+  
+}
+
+.selectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.selprof {
+flex: 0 0 100%; /* Forza a los elementos a ocupar el 100% del ancho en pantallas pequeñas */
+margin-right: 0;
+margin-top: 20px;
+}
+
+.photoback{
+  width: 100px; /* La imagen ocupará el 100% del ancho del encabezado */
+  height: 100px; /* La altura se ajustará automáticamente */
+}
+
+

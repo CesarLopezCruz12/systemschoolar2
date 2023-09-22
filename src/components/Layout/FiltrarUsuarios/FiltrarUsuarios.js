@@ -2,7 +2,7 @@ import { TablaUsuarios } from '@/components/Layout/TablaUsuarios/TablaUsuarios';
 import { CrearUsuario } from '@/components/Layout/CrearUsuario/CrearUsuario';
 //import { TopLogo } from '@/components/Layout/TopLogo/TopLogo';
 import { useState } from 'react';
-import { Dropdown, Button, Search, Table, Input} from "semantic-ui-react";
+import { Dropdown, Button, Search} from "semantic-ui-react";
 import styles from './FiltrarUsuarios.module.scss';
 
 export  function FiltrarUsuarios() {
@@ -21,39 +21,36 @@ export  function FiltrarUsuarios() {
   };
 
   return (
-    <div className={styles.adminusuarios}>
-      
-    
-      
-  <div className={styles.header}>
-    <h1>Usuarios</h1>
-  </div>
-  <div className={styles.filterRow}>
-    <div className={styles.leftSection}>
-      <div className={styles.filterContainer}>
-        <span>Filtrar por:</span>
-        <div className={styles.selectContainer}>
-          <Dropdown
-            placeholder="Filtrar Usuarios"
-            fluid
-            selection
-            options={Filtros}
-            className={styles.filterSelect}
-          />
+    <div className={styles.adminusuarios}>   
+      <div className={styles.header}>
+        <h1>Usuarios</h1>
+      </div>
+      <div className={styles.filterRow}>
+        <div className={styles.leftSection}>
+          <div className={styles.filterContainer}>
+            <span>Filtrar por:</span>
+            <div className={styles.selectContainer}>
+              <Dropdown
+                placeholder="Filtrar Usuarios"
+                fluid
+                selection
+                options={Filtros}
+                className={styles.filterSelect}
+              />
+            </div>
+          </div>
+          <div className={styles.searchContainer}>
+            <Search className={styles.searchInput} />
+          </div>
+        </div>
+        <div className={styles.rightSection}>
+          <Button content='Agregar Estudiante' primary className={styles.addButton} onClick={handleOpenModal} />
+          <CrearUsuario isOpen={modalOpen} onClose={handleCloseModal} />
         </div>
       </div>
-      <div className={styles.searchContainer}>
-        <Search className={styles.searchInput} />
+      <div className={styles.tableContainer}>
+        <TablaUsuarios />
       </div>
     </div>
-    <div className={styles.rightSection}>
-      <Button content='Agregar Estudiante' primary className={styles.addButton} onClick={handleOpenModal} />
-      <CrearUsuario isOpen={modalOpen} onClose={handleCloseModal} />
-    </div>
-  </div>
-  <div className={styles.tableContainer}>
-    <TablaUsuarios />
-  </div>
-</div>
   );
 }

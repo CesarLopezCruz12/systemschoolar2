@@ -1,0 +1,71 @@
+/* Estilos para la página */
+.page-container {
+    padding: 20px;
+  }
+  
+  /* Estilos para el título principal */
+  .pagetitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el contenedor del componente RankingEstudiantil */
+  .ranking-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para el contenedor de filtros */
+  .filtercontainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para la etiqueta "Filtrado por:" */
+  .filter-label {
+    margin-right: 100px;
+    white-space: nowrap; /* Evita el salto de línea */
+  }
+  
+ 
+  .selectiondropdownlevel {
+    width: 50px; /* Ancho personalizado para los select */
+  
+  }
+ 
+  
+  .tableContainer {
+    margin-top: 20px; // Puedes ajustar el valor para controlar la separación entre la tabla y los componentes de arriba
+  }
+
+  .filterRow {
+    display: flex;
+
+    .leftSection {
+      display: flex;
+      align-items: center; // Centrar verticalmente los elementos en la izquierda
+    }
+
+    .rightSection {
+      display: flex;
+    }
+  }
+
+  
+  .filterContainer {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 10px; // Ajusta el espacio entre el título y el select
+    }
+  }
+
+  
+  .selectContainer {
+    margin-right: 50px; // Separación de 30px entre el select y la barra de búsqueda
+    
+  }
