@@ -3,10 +3,8 @@ import styles from "./sign-in.module.scss";
 
 export default function SignInPage(){
     return(
-        <>
-            <JoinLayout>
-                
-            </JoinLayout>
-        </>
+        <div>
+            <JoinLayout/>
+        </div>
     )
 }

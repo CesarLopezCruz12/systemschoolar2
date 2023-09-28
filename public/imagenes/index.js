@@ -1,0 +1,1 @@
+export { default as Ahorasi } from './Ahorasi.svg'

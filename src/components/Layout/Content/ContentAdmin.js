@@ -1,5 +1,6 @@
 import styles from './ContentAdmin.module.scss';
 import { TopLogo } from '@/components/Layout/TopLogo/TopLogo';
+import { HeaderLogo } from '@/components/Layout/HeaderLogo/HeaderLogo';
 import { FiltrarUsuarios } from '@/components/Layout/FiltrarUsuarios/FiltrarUsuarios';
 import { FiltrarAsignaturas } from '@/components/Layout/FiltrarAsignaturas/FiltrarAsignaturas';
 import { FiltrarCalificaciones } from '@/components/Layout/FiltrarCalificaciones/FiltrarCalificaciones';
@@ -35,7 +36,7 @@ export function ContentAdmin({ menuVisible, selectedOption }) {
 
     return (
       <div className={`${styles.content} ${contentClass}`}>
-        <TopLogo/>
+        < TopLogo />
         {content}
       </div>
     )
