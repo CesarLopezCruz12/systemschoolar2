@@ -1,6 +1,6 @@
 import styles from "./AdminUsuariosLayout.module.scss";
 import { MenuBar } from "@/components/Layout/MenuBar/MenuBar";
-import { ContentAdmin } from "@/components/Layout/Content/ContentAdmin";
+import { ContentAdmin } from "@/components/Layout/Content/Content";
 import { TopLogo } from "@/components/Layout/TopLogo/TopLogo"
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -13,6 +13,8 @@ export function AdminUsuariosLayout() {
   const handleSelectOption = (option) => {
     setSelectedOption(option);
   };
+
+
 
   return (
     <div >

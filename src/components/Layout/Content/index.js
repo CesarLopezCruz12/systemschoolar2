@@ -1,1 +1,1 @@
-export * from './ContentAdmin';
+export * from './Content';

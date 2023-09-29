@@ -1,0 +1,121 @@
+/* Sidebar.module.scss */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #0b3954;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  
+  .collapsed {
+    width: 60px;
+  }
+  
+  .toggleButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .menuContent {
+    padding: 10px;
+  }
+  
+  .menuContentCollapsed {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea los elementos a la derecha */
+    padding: 10px;
+  }
+  
+  /* Estilos para cada elemento del menú */
+  .menuItem {
+    display: flex;
+    flex-direction: column; /* Alinea el icono y el texto verticalmente */
+    align-items: flex-start; /* Alinea el icono y el texto a la izquierda */
+    padding: 10px 20px; /* Espacio vertical y horizontal */
+    cursor: pointer;
+    margin-bottom: 35px; /* Separación vertical de 100px */
+  }
+  
+  .menuItemConteiner {
+    display: flex;
+    flex-direction: column; /* Alinea el icono y el texto verticalmente */
+    align-items: flex-start; /* Alinea el icono y el texto a la izquierda */
+    padding: 10px 20px; /* Espacio vertical y horizontal */
+    cursor: pointer;
+    margin-bottom: 90px; /* Separación vertical de 100px */
+  }
+  
+  /* Estilos para los íconos */
+  .iconVisible {
+    font-size: 24px; /* Tamaño de ícono más grande */
+    margin-right: 10px; /* Espacio entre ícono y texto */
+  }
+  
+  .iconHidden {
+    display: none; /* Oculta los íconos cuando el menú está contraído */
+  }
+  
+  /* Estilos para el contenedor del ícono y el texto */
+  .itemWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  
+  .nameUser{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .typeUser{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: #bfd7ea;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .photoUser{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  
+  }
+  .photoUserConteiner{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-bottom: 20px;
+  }
+  .photo {
+    height: 130px;
+    width: 130px;
+  }
+  
+  .logout {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-bottom: 20px;
+  }
+  
+  .finalline{
+    margin-left: 15px;
+    width: 220px;
+  }
+  

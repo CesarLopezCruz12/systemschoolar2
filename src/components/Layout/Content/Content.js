@@ -6,6 +6,13 @@ import { FiltrarAsignaturas } from '@/components/Layout/FiltrarAsignaturas/Filtr
 import { FiltrarCalificaciones } from '@/components/Layout/FiltrarCalificaciones/FiltrarCalificaciones';
 import { Ranking } from '@/components/Layout/Ranking/Ranking';
 import { Reportes } from '@/components/Layout/Reportes/Reportes';
+import { Seleccion } from '../Seleccion';
+import { CalificacionFinal } from '../CalificacionFinal';
+import { CalificacionMedioTermino } from '../CalificacionMedioTermino';
+import { InicioEstudiante } from '../InicioEstudiante';
+import { Retiros } from '../Retiros';
+import { HistorialAcademico } from '../HistorialAcademico';
+import { Pensum } from '../Pensum';
 
 export function ContentAdmin({ menuVisible, selectedOption }) {
     
@@ -26,6 +33,30 @@ export function ContentAdmin({ menuVisible, selectedOption }) {
       break;
       case 'reportes':
         content = <Reportes />;
+      break;
+      case 'inicio':
+        content = <Reportes />;
+      break 
+      case 'seleccion':
+        content = <Seleccion />;
+      break;
+      case 'retiros':
+        content = <Retiros />;
+      break;
+      case 'rankingestudiante':
+        content = <Ranking />;
+      break;
+      case 'calificacionesmediotermino':
+        content = <CalificacionMedioTermino />;
+      break;
+      case 'calificacionfinal':
+        content = <CalificacionFinal />;
+      break;
+      case 'historialacademico':
+        content = <HistorialAcademico />;
+      break;
+      case 'pensum':
+        content = <Pensum />;
       break;
       // Agrega más casos según tus opciones de menú
       default:
