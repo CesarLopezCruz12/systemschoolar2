@@ -23,3 +23,4 @@ export * from './InicioEstudiante';
 export * from './HistorialAcademico';
 export * from './CalificacionFinal';
 export * from './CalificacionMedioTermino';
+export * from './TipoUsuario';

@@ -1,86 +1,45 @@
-.crearusuariolayout{
-    background-color: lightblue !important;
-}
+// Formulario.module.scss
 
 .modal {
-    width: 400px; /* Ancho del modal */
-    background-color: lightblue !important;
+  max-width: 350px; // Reduzca el ancho máximo del modal
+  display: flex; /* Añade display: flex para centrar verticalmente el contenido */
+  flex-direction: column; /* Añade flex-direction: column para apilar los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.modalheader {
+  text-align: center; /* Centra horizontalmente el texto del título */
+  margin-bottom: 16px; /* Añade un espacio inferior para separar el título de los campos del formulario */
+}
+
+.form {
+  input,
+  select {
+    width: 100%; // Haz que los inputs y el select ocupen todo el ancho disponible
+    padding: 6px; // Reduzca el espaciado interior
+    margin-bottom: 8px; // Reduzca el espaciado entre los campos
+    font-size: 12px; // Reduzca el tamaño de fuente
   }
 
-.checkboxGroup {
-    display: flex;
-    flex-direction: column; /* Alinea verticalmente los checkboxes */
+  .ui.selection.dropdown {
+    width: 100%; // Ajusta el ancho del select al 100%
+    font-size: 12px; // Reduzca el tamaño de fuente del select
   }
-  
-  .checkboxContainer {
-    display: flex;
-    //justify-content: space-between; /* Alinea los checkboxes en una fila */
-  }
-  
-  .checkboxItem {
-    margin-right: 20px; /* Espacio de 20px entre los checkboxes */
-  }
-  
-  .nameRow {
-    display: flex;
-    justify-content: space-between; /* Alinea los campos de nombre y apellidos en una fila */
-    margin-bottom: 20px; /* Espacio entre las filas de campos de nombre y apellidos y otros campos */
-  }
-  
-  .nameField {
-    flex: 1; /* Distribuye el espacio de manera uniforme entre los campos de nombre, apellido paterno y apellido materno */
-    margin-right: 10px; /* Espacio entre los campos de nombre, apellido paterno y apellido materno */
-  }
-  
-  .emailPhoneRow {
-    display: flex;
-    justify-content: space-between; /* Alinea los campos de correo y teléfono en una fila */
-    margin-bottom: 20px; /* Espacio entre las filas de campos de correo y teléfono y otros campos */
-  }
-  
-  .emailField {
-    flex: 1; /* Distribuye el espacio de manera uniforme entre los campos de correo y teléfono */
-    margin-right: 10px; /* Espacio entre los campos de correo y teléfono */
-  }
-  
-  .phoneField {
-    flex: 1; /* Distribuye el espacio de manera uniforme entre los campos de correo y teléfono */
-  }
-  
-  .buttonContainer {
-    display: flex;
-    justify-content: space-between; /* Alinea los botones Cancelar y Guardar en los extremos */
-    
-  }
-  
-  .actionsContainer{
-    //background-color: #272727 !important;
-  }
-  .cancelButton {
-    margin-left: 0; /* Espacio a la derecha del botón Cancelar */
-    float: left;
-  }
-  
-  .saveButton {
-    margin-right: 10px; /* Espacio a la izquierda del botón Guardar */
-    //float:right;
-  }
+}
 
-  .modalactions{
-    //background-color: #272727 !important;
-        
-  }
-      .nameCell {
-        width: 200px !important; /* Ajusta el ancho de las celdas de la columna "Nombre" */
-      }
-      
-      .idCell {
-        width: 100px !important; /* Ajusta el ancho de las celdas de la columna "Matrícula" */
-      }
-      
-      .emailCell {
-        width: 300px !important; /* Ajusta el ancho de las celdas de la columna "Email" */
-      }
-      .actionsCell {
-        width: 50px !important; /* Ajusta el ancho de las celdas de la columna "Email" */
-      }
+/* Reduce el tamaño de los botones */
+.ui.modal .actions .button {
+  font-size: 12px; // Reduzca el tamaño de fuente de los botones
+  padding: 6px 12px; // Reduzca el espaciado interior de los
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  flex: 1;
+  margin: 0 30px; /* Ajusta el margen entre los botones si lo deseas */
+  max-width: 150px;
+}
