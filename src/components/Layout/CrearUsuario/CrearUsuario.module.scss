@@ -43,3 +43,58 @@
   margin: 0 30px; /* Ajusta el margen entre los botones si lo deseas */
   max-width: 150px;
 }
+
+/////////////////////////////////////////////////////////////////////////
+
+Formulario basico
+
+.userSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .checkboxContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 20px;
+
+    label {
+      margin-right: 10px;
+    }
+  }
+
+  .contentContainer {
+    width: 300px;
+  }
+}
+
+/* Agrega estilos para el mensaje "Selecciona un perfil" */
+.noSelection {
+  font-size: 18px; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Texto en negrita */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+  border: 2px solid red; /* Borde rojo (puedes personalizarlo) */
+  //background-color: #ffcccc; /* Fondo de color rojo claro (puedes personalizarlo) */
+  margin-top: 20px; /* Margen superior para separarlo del contenido anterior */
+}
+
+
+
+
+
+/* ImageUpload.module.scss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.saveButton {
+  margin-top: 20px;
+  align-self: flex-end;
+}

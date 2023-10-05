@@ -1,4 +1,4 @@
-import { HomeLayout } from "@/layouts";
+import { HomeLayout } from "@/layouts/HomeLayout/HomeLayout";
 
 
 export default function HomePage() {
