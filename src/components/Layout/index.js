@@ -24,3 +24,4 @@ export * from './HistorialAcademico';
 export * from './CalificacionFinal';
 export * from './CalificacionMedioTermino';
 export * from './TipoUsuario';
+export * from './ModificarUsuario';

@@ -1,0 +1,43 @@
+/* En ModificarUsuario.module.scss */
+
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Espacio entre etiqueta y campo */
+  }
+  
+  .field {
+    width: 100%; /* Todos los campos tienen el mismo ancho */
+    margin-top: 5px; /* Espacio entre campos */
+  }
+  
+  .gridsize {
+    .gridcolumn {
+      flex: 0 0 25%; /* Establece el ancho de las columnas al 25% */
+    }
+  }
+
+  
+  .modalcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+  
+.imagecontainer{
+  display: flex; /* Utilizamos Flexbox para centrar la imagen */
+  justify-content: center; /* Centramos horizontalmente */
+  align-items: center; /* Centramos verticalmente */
+  height: 205px;
+  width: 180px;
+}
+
+.photouser{
+    max-width: 100%; /* Ajusta el tamaño de la imagen para evitar desbordamientos */
+    max-height: 100%;
+}
+
+.actionscointeiner{
+  display: flex;
+  justify-content: space-between;
+}

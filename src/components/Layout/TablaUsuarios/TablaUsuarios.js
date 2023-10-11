@@ -1,8 +1,9 @@
 import { Table, Button, Icon , Pagination} from "semantic-ui-react";
 import styles from './TablaUsuarios.module.scss';
 import React, { useState } from 'react';
+import { ModificarUsuario } from "../ModificarUsuario";
 
-let data = [
+let datauser = [
     { Name: 'Juan Pérez', ID: '12345', TIUser: 'Profesor',  Email: 'juan@example.com', type: "Estudiante", Registerdate: '2023-01-15' },
     { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
     { Name: 'María López', ID: '67890', TIUser: 'Estudiante', Email: 'maria@example.com', type: "Estudiante", Registerdate: '2023-02-20' },
@@ -25,11 +26,16 @@ export function TablaUsuarios() {
     
     const [confirmOpen, setConfirmOpen] = useState(false);
     const [selectedItemId, setSelectedItemId] = useState(null);
+    const [data, setData] = useState([]); // Asumiendo que tienes tu lista de datos en estado
 
-  const handleEdit = (id) => {
-    // Lógica para editar el elemento con el ID proporcionado
-    // Aquí puedes abrir un modal o realizar la acción que necesites.
-  };
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [editUserId, setEditUserId] = useState(null);
+
+
+    const handleEdit = (userId) => {
+      setEditUserId(userId);
+      setIsEditModalOpen(true);
+    };
 
   const handleDelete = (id) => {
     setSelectedItemId(id);
@@ -40,7 +46,7 @@ export function TablaUsuarios() {
     // Lógica para eliminar el elemento con el ID seleccionado
     // Aquí debes eliminar el elemento de tu lista de datos.
     // Por ejemplo, puedes usar filter para crear una nueva lista sin el elemento.
-    data = data.filter((item) => item.id !== selectedItemId);
+    datauser = datauser.filter((item) => item.id !== selectedItemId);
     setConfirmOpen(false);
   };
 
@@ -75,7 +81,7 @@ export function TablaUsuarios() {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {data.map((item, index) => (
+          {datauser.map((item, index) => (
             <Table.Row key={index}>
               <Table.Cell style={{ width: '150px' }} className={styles.centeredCell}>{/*item.Photo*/}<Icon name="id card" /></Table.Cell>
               <Table.Cell style={{ width: '200px' }} className={styles.centeredCell}>{item.Name}</Table.Cell>
@@ -100,7 +106,12 @@ export function TablaUsuarios() {
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
-
+      <ModificarUsuario
+       isOpen={isEditModalOpen}
+       onClose={() => setIsEditModalOpen(false)}
+       userId={editUserId}
+       data={data} 
+      />
     </div>
   )
 }
